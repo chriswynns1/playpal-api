@@ -2,4 +2,15 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
   args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
+  secretEnv: ['GRID_KEY', 'PALM_KEY', 'STEAM_KEY', 'RAWG_KEY']
 timeout: '1600s'
+availableSecrets:
+  secretManager:
+  - versionName: projects/playpal-63bee/secrets/GRID_KEY/versions/latest
+    env: 'GRID_KEY'
+  - versionName: projects/playpal-63bee/secrets/PALM_KEY/versions/latest
+    env: 'PALM_KEY'
+  - versionName: projects/playpal-63bee/secrets/STEAM_KEY/versions/latest
+    env: 'STEAM_KEY'
+  - versionName: projects/playpal-63bee/secrets/RAWG_KEY/versions/latest
+    env: 'RAWG_KEY'
