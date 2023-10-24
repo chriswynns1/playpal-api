@@ -1,2 +1,2 @@
 runtime: nodejs18
-entrypoint: express.js
+entrypoint: node express.js
