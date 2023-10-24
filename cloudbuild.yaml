@@ -6,11 +6,11 @@ steps:
 timeout: '1600s'
 availableSecrets:
   secretManager:
-  - versionName: projects/741034783195/secrets/GRID_KEY
+  - versionName: projects/741034783195/secrets/GRID_KEY/versions/1
     env: 'GRID_KEY'
-  - versionName: projects/741034783195/secrets/PALM_KEY
+  - versionName: projects/741034783195/secrets/PALM_KEY/versions/1
     env: 'PALM_KEY'
-  - versionName: projects/741034783195/secrets/STEAM_KEY
+  - versionName: projects/741034783195/secrets/STEAM_KEY/versions/1
     env: 'STEAM_KEY'
-  - versionName: projects/741034783195/secrets/RAWG_KEY
+  - versionName: projects/741034783195/secrets/RAWG_KEY/versions/1
     env: 'RAWG_KEY'
