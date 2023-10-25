@@ -20,9 +20,9 @@ availableSecrets:
     env: 'FIREBASE_PROJECT_ID'
   - versionName: projects/741034783195/secrets/FIREBASE_PRIVATE_KEY_ID/versions/1
     env: 'FIREBASE_PRIVATE_KEY_ID'
-    - versionName: projects/741034783195/secrets/FIREBASE_PRIVATE_KEY/versions/1
+  - versionName: projects/741034783195/secrets/FIREBASE_PRIVATE_KEY/versions/1
     env: 'FIREBASE_PRIVATE_KEY'
-    - versionName: projects/741034783195/secrets/FIREBASE_CLIENT_EMAIL/versions/1
+  - versionName: projects/741034783195/secrets/FIREBASE_CLIENT_EMAIL/versions/1
     env: 'FIREBASE_CLIENT_EMAIL'
-    - versionName: projects/741034783195/secrets/FIREBASE_509/versions/1
+  - versionName: projects/741034783195/secrets/FIREBASE_509/versions/1
     env: 'FIREBASE_509'
