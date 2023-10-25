@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
   args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
-  secretEnv: ['GRID_KEY', 'PALM_KEY', 'STEAM_KEY', 'RAWG_KEY']
+  secretEnv: ['GRID_KEY', 'PALM_KEY', 'STEAM_KEY', 'RAWG_KEY', 'FIREBASE_TYPE', 'FIREBASE_PROJECT_ID', 'FIREBASE_PRIVATE_KEY_ID', 'FIREBASE_PRIVATE_KEY', 'FIREBASE_CLIENT_EMAIL', 'FIREBASE_CLIENT_ID', 'FIREBASE_509']
 timeout: '1600s'
 availableSecrets:
   secretManager:
@@ -14,3 +14,15 @@ availableSecrets:
     env: 'STEAM_KEY'
   - versionName: projects/741034783195/secrets/RAWG_KEY/versions/1
     env: 'RAWG_KEY'
+  - versionName: projects/741034783195/secrets/FIREBASE_TYPE/versions/1
+    env: 'FIREBASE_TYPE'
+  - versionName: projects/741034783195/secrets/FIREBASE_PROJECT_ID/versions/1
+    env: 'FIREBASE_PROJECT_ID'
+  - versionName: projects/741034783195/secrets/FIREBASE_PRIVATE_KEY_ID/versions/1
+    env: 'FIREBASE_PRIVATE_KEY_ID'
+    - versionName: projects/741034783195/secrets/FIREBASE_PRIVATE_KEY/versions/1
+    env: 'FIREBASE_PRIVATE_KEY'
+    - versionName: projects/741034783195/secrets/FIREBASE_CLIENT_EMAIL/versions/1
+    env: 'FIREBASE_CLIENT_EMAIL'
+    - versionName: projects/741034783195/secrets/FIREBASE_509/versions/1
+    env: 'FIREBASE_509'
