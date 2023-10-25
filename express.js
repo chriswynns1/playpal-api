@@ -5,7 +5,21 @@ const app = express();
 const axios = require("axios");
 const path = require("path");
 const admin = require("firebase-admin");
-const serviceAccount = require("./playpal-63bee-firebase-adminsdk-93g9b-349e99a35e.json");
+
+const serviceAccount = {
+  type: process.env.FIREBASE_TYPE,
+  project_id: process.env.FIREBASE_PROJECT_ID,
+  private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
+  private_key: process.env.FIREBASE_PRIVATE_KEY,
+  client_email: process.env.FIREBASE_CLIENT_EMAIL,
+  client_id: process.env.FIREBASE_CLIENT_ID,
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+  client_x509_cert_url: process.env.FIREBASE_509,
+  universe_domain: "googleapis.com"
+}
+
 const { TextServiceClient } = require("@google-ai/generativelanguage");
 const { GoogleAuth } = require("google-auth-library");
 const STEAM_KEY = process.env.STEAM_KEY;
